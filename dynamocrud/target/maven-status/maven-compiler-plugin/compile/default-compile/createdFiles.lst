@@ -1,0 +1,4 @@
+com\aws\lambda\dynamocrud\Handler.class
+com\aws\lambda\dynamocrud\Request.class
+com\aws\lambda\dynamocrud\Producto.class
+com\aws\lambda\Main.class
