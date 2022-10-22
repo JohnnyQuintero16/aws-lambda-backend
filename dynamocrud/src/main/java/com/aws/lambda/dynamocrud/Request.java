@@ -6,8 +6,6 @@ public class Request {
 
     private String httpMethod;
 
-    private Producto producto;
-
     public int getId() {
         return id;
     }
@@ -24,11 +22,4 @@ public class Request {
         this.httpMethod = httpMethod;
     }
 
-    public Producto getProducto() {
-        return producto;
-    }
-
-    public void setProducto(Producto producto) {
-        this.producto = producto;
-    }
 }
