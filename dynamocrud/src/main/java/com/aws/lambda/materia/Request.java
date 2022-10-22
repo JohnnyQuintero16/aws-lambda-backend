@@ -8,7 +8,16 @@ public class Request {
 
     private String httpMethod;
 
-    private Estudiante estudiante;
+    private Materia materia;
+
+    public Request() {
+    }
+
+    public Request(int id, String httpMethod, Materia materia) {
+        this.id = id;
+        this.httpMethod = httpMethod;
+        this.materia = materia;
+    }
 
     public int getId() {
         return id;
@@ -26,11 +35,11 @@ public class Request {
         this.httpMethod = httpMethod;
     }
 
-    public Estudiante getEstudiante() {
-        return estudiante;
+    public Materia getMateria() {
+        return materia;
     }
 
-    public void setEstudiante(Estudiante estudiante) {
-        this.estudiante = estudiante;
+    public void setMateria(Estudiante estudiante) {
+        this.materia = materia;
     }
 }

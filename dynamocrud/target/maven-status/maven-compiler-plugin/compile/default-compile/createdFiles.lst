@@ -1,0 +1,5 @@
+com\aws\lambda\dynamocrud\Estudiante.class
+com\aws\lambda\dynamocrud\Handler.class
+com\aws\lambda\dynamocrud\Request.class
+com\aws\lambda\Main.class
+com\aws\lambda\dynamocrud\Materia.class

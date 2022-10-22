@@ -8,6 +8,15 @@ public class Request {
 
     private Estudiante estudiante;
 
+    public Request() {
+    }
+
+    public Request(int id, String httpMethod, Estudiante estudiante) {
+        this.id = id;
+        this.httpMethod = httpMethod;
+        this.estudiante = estudiante;
+    }
+
     public int getId() {
         return id;
     }
