@@ -1,4 +1,4 @@
-package com.aws.lambda.dynamocrud;
+package com.aws.lambda.estudiante;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
@@ -19,13 +19,14 @@ public class Estudiante {
     @DynamoDBAttribute
     private String nombre;
 
-    ArrayList<Integer> notas = new ArrayList<Integer>();
+    @DynamoDBAttribute
+    List<Integer> notas = new ArrayList<Integer>();
 
     public Estudiante() {
 
     }
 
-    public Estudiante(int id, int idMateria, String nombre, ArrayList<Integer> notas) {
+    public Estudiante(int id, int idMateria, String nombre, List<Integer> notas) {
         this.id = id;
         this.idMateria = idMateria;
         this.nombre = nombre;
@@ -56,11 +57,11 @@ public class Estudiante {
         this.nombre = nombre;
     }
 
-    public ArrayList<Integer> getNotas() {
+    public List<Integer> getNotas() {
         return notas;
     }
 
-    public void setNotas(ArrayList<Integer> notas) {
+    public void setNotas(List<Integer> notas) {
         this.notas = notas;
     }
 }

@@ -1,4 +1,4 @@
-package com.aws.lambda.dynamocrud;
+package com.aws.lambda.materia;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
