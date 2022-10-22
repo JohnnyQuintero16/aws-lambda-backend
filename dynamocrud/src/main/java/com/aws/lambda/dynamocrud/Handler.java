@@ -15,11 +15,11 @@ public class Handler implements RequestHandler<Request, Object> {
     @Override
     public Object handleRequest(Request request, Context context) {
 
-        AmazonDynamoDB db = AmazonDynamoDBClientBuilder.defaultClient();
+       /* AmazonDynamoDB db = AmazonDynamoDBClientBuilder.defaultClient();
         DynamoDBMapper mapper = new DynamoDBMapper(db);
         Producto producto = null;
 
-        switch (request.getHttpMethod()) {
+       switch (request.getHttpMethod()) {
             case "GET":
                 if (request.getId() == 0) {
                     List<Producto> productos = new ArrayList<>();
@@ -40,7 +40,8 @@ public class Handler implements RequestHandler<Request, Object> {
                 if (producto != null)
                     mapper.delete(producto);
                 return producto;
-        }
+        }*/
         return null;
     }
+
 }
