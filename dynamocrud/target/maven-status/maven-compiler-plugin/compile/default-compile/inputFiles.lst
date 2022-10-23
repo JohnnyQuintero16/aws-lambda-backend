@@ -1,5 +1,7 @@
-E:\Usuario\Desktop\aws-lambda-backend\dynamocrud\src\main\java\com\aws\lambda\dynamocrud\Materia.java
-E:\Usuario\Desktop\aws-lambda-backend\dynamocrud\src\main\java\com\aws\lambda\dynamocrud\Handler.java
-E:\Usuario\Desktop\aws-lambda-backend\dynamocrud\src\main\java\com\aws\lambda\dynamocrud\Request.java
-E:\Usuario\Desktop\aws-lambda-backend\dynamocrud\src\main\java\com\aws\lambda\dynamocrud\Estudiante.java
-E:\Usuario\Desktop\aws-lambda-backend\dynamocrud\src\main\java\com\aws\lambda\Main.java
+C:\Users\johnny.quintero_prag\Documents\university\arqui\aws-lambda\aws-lambda-backend\dynamocrud\src\main\java\com\aws\lambda\materia\Request.java
+C:\Users\johnny.quintero_prag\Documents\university\arqui\aws-lambda\aws-lambda-backend\dynamocrud\src\main\java\com\aws\lambda\estudiante\Estudiante.java
+C:\Users\johnny.quintero_prag\Documents\university\arqui\aws-lambda\aws-lambda-backend\dynamocrud\src\main\java\com\aws\lambda\estudiante\RequestEstudiante.java
+C:\Users\johnny.quintero_prag\Documents\university\arqui\aws-lambda\aws-lambda-backend\dynamocrud\src\main\java\com\aws\lambda\materia\Handler.java
+C:\Users\johnny.quintero_prag\Documents\university\arqui\aws-lambda\aws-lambda-backend\dynamocrud\src\main\java\com\aws\lambda\Main.java
+C:\Users\johnny.quintero_prag\Documents\university\arqui\aws-lambda\aws-lambda-backend\dynamocrud\src\main\java\com\aws\lambda\estudiante\Handler.java
+C:\Users\johnny.quintero_prag\Documents\university\arqui\aws-lambda\aws-lambda-backend\dynamocrud\src\main\java\com\aws\lambda\materia\Materia.java

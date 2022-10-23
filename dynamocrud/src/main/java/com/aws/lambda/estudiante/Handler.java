@@ -9,11 +9,13 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
-public class Handler implements RequestHandler<Request, Object> {
+
+public class Handler implements RequestHandler<RequestEstudiante, Object> {
 
     @Override
-    public Object handleRequest(Request request, Context context) {
+    public Object handleRequest(RequestEstudiante request, Context context) {
 
         AmazonDynamoDB db = AmazonDynamoDBClientBuilder.defaultClient();
         DynamoDBMapper mapper = new DynamoDBMapper(db);
@@ -21,19 +23,9 @@ public class Handler implements RequestHandler<Request, Object> {
 
        switch (request.getHttpMethod()) {
             case "GET":
-                return mapper.scan(Estudiante.class, new DynamoDBScanExpression())
-                        .stream()
-                        .filter( estu -> estu.getIdMateria() == request.getId());
-
-                /*if (request.getId() == 0) {
-                    List<Estudiante> estudiantes = new ArrayList<>();
-                    estudiantes = mapper.scan(Estudiante.class, new DynamoDBScanExpression());
-                    return estudiantes;
-                } else {
-                    estudiante = mapper.load(Estudiante.class, request.getId());
-                    return estudiante;
-                }*/
-
+                List<Estudiante> estudianteList = new ArrayList<>();
+                estudianteList = mapper.scan(Estudiante.class, new DynamoDBScanExpression());
+                return estudianteList.stream().filter(estu -> estu.getIdMateria() == request.getId()).collect(Collectors.toList());
             case "POST":
                 estudiante = request.getEstudiante();
                 mapper.save(estudiante);
