@@ -1,0 +1,10 @@
+
+m
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(¶Ÿä„øÿÿÿÿ8ÄáèÀ0
+<	java:S131""Add a default case to this switch.(¶Ÿä„øÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(Õª­š
+F
+java:S1128
+"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ

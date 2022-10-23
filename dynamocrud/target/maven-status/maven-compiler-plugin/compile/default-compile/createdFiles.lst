@@ -1,5 +1,7 @@
-com\aws\lambda\dynamocrud\Estudiante.class
-com\aws\lambda\dynamocrud\Handler.class
-com\aws\lambda\dynamocrud\Request.class
+com\aws\lambda\estudiante\Request.class
+com\aws\lambda\materia\Handler.class
+com\aws\lambda\estudiante\Estudiante.class
+com\aws\lambda\estudiante\Handler.class
 com\aws\lambda\Main.class
-com\aws\lambda\dynamocrud\Materia.class
+com\aws\lambda\materia\Materia.class
+com\aws\lambda\materia\Request.class

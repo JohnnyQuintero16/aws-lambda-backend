@@ -21,24 +21,22 @@ public class Handler implements RequestHandler<Request, Object> {
 
        switch (request.getHttpMethod()) {
             case "GET":
-                if (request.getId() == 0) {
+                return mapper.scan(Estudiante.class, new DynamoDBScanExpression())
+                        .stream()
+                        .filter( estu -> estu.getIdMateria() == request.getId());
+
+                /*if (request.getId() == 0) {
                     List<Estudiante> estudiantes = new ArrayList<>();
                     estudiantes = mapper.scan(Estudiante.class, new DynamoDBScanExpression());
                     return estudiantes;
                 } else {
                     estudiante = mapper.load(Estudiante.class, request.getId());
                     return estudiante;
-                }
+                }*/
 
-            case "PUT":
+            case "POST":
                 estudiante = request.getEstudiante();
                 mapper.save(estudiante);
-                return estudiante;
-
-            case "DELETE":
-                estudiante = mapper.load(Estudiante.class, request.getId());
-                if (estudiante != null)
-                    mapper.delete(estudiante);
                 return estudiante;
         }
         return null;
