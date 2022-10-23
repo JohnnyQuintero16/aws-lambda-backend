@@ -21,7 +21,7 @@ public class Handler implements RequestHandler<RequestEstudiante, Object> {
         DynamoDBMapper mapper = new DynamoDBMapper(db);
         Estudiante estudiante = null;
 
-       switch (request.getHttpMethod()) {
+        switch (request.getHttpMethod()) {
             case "GET":
                 List<Estudiante> estudianteList = new ArrayList<>();
                 estudianteList = mapper.scan(Estudiante.class, new DynamoDBScanExpression());
