@@ -4,4 +4,4 @@ com\aws\lambda\estudiante\Handler.class
 com\aws\lambda\Main.class
 com\aws\lambda\materia\Materia.class
 com\aws\lambda\estudiante\RequestEstudiante.class
-com\aws\lambda\materia\Request.class
+com\aws\lambda\materia\RequestMateria.class

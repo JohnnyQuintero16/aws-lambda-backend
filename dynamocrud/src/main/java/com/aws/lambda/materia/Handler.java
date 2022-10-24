@@ -10,14 +10,14 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Handler implements RequestHandler<Request, Object> {
+public class Handler implements RequestHandler<RequestMateria, Object> {
 
     @Override
-    public Object handleRequest(Request request, Context context) {
+    public Object handleRequest(RequestMateria request, Context context) {
 
         AmazonDynamoDB db = AmazonDynamoDBClientBuilder.defaultClient();
         DynamoDBMapper mapper = new DynamoDBMapper(db);
-        Materia materia = null;
+        Materia materia = new Materia();
 
         switch (request.getHttpMethod()) {
             case "GET":
@@ -29,6 +29,14 @@ public class Handler implements RequestHandler<Request, Object> {
                     materia = mapper.load(Materia.class, request.getId());
                     return materia;
                 }
+            case "POST":
+                materia = request.getMateria();
+                mapper.save(materia);
+                return request;
+            case "DELETE":
+                materia = mapper.load(Materia.class, request.getId());
+                mapper.delete(materia);
+                return materia;
         }
         return null;
     }
