@@ -28,6 +28,19 @@ public class Handler implements RequestHandler<RequestEstudiante, Object> {
                 return estudianteList.stream().filter(estu -> estu.getIdMateria() == request.getId()).collect(Collectors.toList());
             case "POST":
                 estudiante = request.getEstudiante();
+                double definitiva = 0.0F;
+                int size = estudiante.getNotas().size();
+                if(size == 5) size--;
+                for(int i = 0; i < size; i++){
+                    definitiva += estudiante.getNotas().get(i);
+                }
+
+                if(estudiante.getNotas().size() == 5){
+                    estudiante.getNotas().set(4, definitiva/4);
+                }else{
+                    estudiante.getNotas().add(definitiva/4);
+                }
+
                 mapper.save(estudiante);
                 return estudiante;
         }

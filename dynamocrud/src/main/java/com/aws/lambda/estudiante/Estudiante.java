@@ -20,13 +20,13 @@ public class Estudiante {
     private String nombre;
 
     @DynamoDBAttribute
-    List<Integer> notas = new ArrayList<Integer>();
+    List<Double> notas = new ArrayList<Double>();
 
     public Estudiante() {
 
     }
 
-    public Estudiante(int id, int idMateria, String nombre, List<Integer> notas) {
+    public Estudiante(int id, int idMateria, String nombre, List<Double> notas) {
         this.id = id;
         this.idMateria = idMateria;
         this.nombre = nombre;
@@ -57,11 +57,11 @@ public class Estudiante {
         this.nombre = nombre;
     }
 
-    public List<Integer> getNotas() {
+    public List<Double> getNotas() {
         return notas;
     }
 
-    public void setNotas(List<Integer> notas) {
+    public void setNotas(List<Double> notas) {
         this.notas = notas;
     }
 }
